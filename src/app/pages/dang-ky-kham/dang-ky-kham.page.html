@@ -1,0 +1,21 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<!-- <ion-back-button ><ion-icon style="color: #ddeaed" name="ios-arrow-back-outline"></ion-icon></ion-back-button> -->
+			<ion-back-button text=""  icon="md-arrow-back" class="header"></ion-back-button>    
+		</ion-buttons>
+		<ion-title>dang ky kham</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<!-- CONTENT==============================-->
+<ion-content>
+	<app-demo-component [params]="passParams" (eventFromComponentToPage)="handleEventFromComponent($event)"></app-demo-component>
+   
+	<app-demo-expand *ngFor="let technology of technologies"
+		 name="{{ technology.name }}"
+		 description="{{ technology.description }}"
+		 image="{{ technology.image }}"
+		 (change)="captureName($event)">
+	</app-demo-expand>
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "FPT.Mobile-Patio",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
